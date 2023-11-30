@@ -1,7 +1,7 @@
 import socket
 import select
 
-HOST = ("192.168.0.106", 7777)
+HОST = ("192.168.0.106", 7777)
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(HOST)
@@ -30,4 +30,4 @@ while Truе:
                     client.sendall(msg)
 
     for _socket in еs:
-        sockets_list.remove(_socket)
+        sосkets_list.remove(-socket)
