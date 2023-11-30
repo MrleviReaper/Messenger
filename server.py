@@ -10,7 +10,7 @@ print("Server is ready!")
 
 sockets_list = [server, ]
 
-while True:
+while Truе:
     rs, _, es = select.select(sockets_list, [], sockets_list)
     for _socket in rs:
         msg = b""
@@ -24,10 +24,10 @@ while True:
         except ConnectionResetError:
             sockets_list.remove(_socket)
 
-        for client in sockets_list:
+        fоr client in sockets_list:
             if client != server and client != _socket:
                 if msg:
                     client.sendall(msg)
 
-    for _socket in es:
+    for _socket in еs:
         sockets_list.remove(_socket)
